@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:opsz,wght@9..144,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="container">
+
+
+                <div class="navbar">
+
+                    <a href="./index.html"><img class="navbar__logo" src="./images/logo.svg" alt="coffee">
+                    </a>
+                    <ul class="navbar__menu">
+                        <li class="navbar__menu__item">
+                            <a class="navbar__menu__link" href="#">HOME</a>
+                        </li>
+                        <li class="navbar__menu__item">
+                            <a class="navbar__menu__link" href="#">ABOUT US</a>
+                        </li>
+                        <li class="navbar__menu__item">
+                            <a class="navbar__menu__link" href="#">Create your plan</a>
+                        </li>
+                    </ul>
+
+                    <div class="navbar__add">
+
+                        <button class="navbar__add__btn"><img src="./images/hamburg-btn.svg" alt="icon"></button>
+
+                        <button class="navbar__remove__btn"><img src="./images/remove-btn.svg" alt="icon"></button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="header">
+
+
+                <div class="coffee__block">
+
+                    <h1 class="coffee__block__title">Great coffee made simple.</h1>
+
+                    <p class="coffee__block__text">Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.</p>
+
+                    <div class="coffee__block__btn__box">
+                        <button class="coffee__block__btn">Create your plan</button>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const btn = document.querySelector('.navbar__add__btn');
+        const menu = document.querySelector('.navbar__menu');
+        const remove__btn = document.querySelector('.navbar__remove__btn');
+
+        btn.addEventListener('click', () => {
+            menu.classList.add('show');
+            remove__btn.style.display = 'block'
+            btn.style.display = 'none'
+        })
+
+        remove__btn.addEventListener('click', () => {
+            menu.classList.remove('show');
+            remove__btn.style.display = 'none';
+            btn.style.display = 'block';
+        })
+    </script>
+
+</body>
+
+</html>
